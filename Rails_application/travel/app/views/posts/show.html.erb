@@ -1,7 +1,9 @@
 
-<h1><%= @post.title %></h1>
+<h1 class="title"><%= @post.title %></h1>
 
-<div><%= @post.body %></div>
+<p class="date">Submitted <%= time_ago_in_words(@post.created_at) %> Ago</p>
+
+<p class="body"><%= @post.body %></p>
 
 <%= link_to "Edit Post", edit_post_path(@post) %>
 
