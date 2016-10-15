@@ -3,6 +3,8 @@
 <head>
   <title>Travelogue</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' %>
+  <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Titillium+Web' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -12,6 +14,32 @@
 <div class="header_image">
 
 </div>
+
+<!-- navigation bar-->
+
+    <nav>
+         
+        <ul>
+
+          <li><%= link_to 'START HERE', root_path %></li>
+          <li><%= link_to 'TRAVEL', root_path %></li>
+          <li><%= link_to 'BLOG', root_path %></li>
+          <li><%= link_to 'DESTINATIONS', root_path %></li>
+          <li><%= link_to 'ABOUT', root_path %></li>
+          <li><%= link_to 'GUIDES', root_path %></li>
+          <li><%= link_to 'CONTACT',root_path %></li>
+
+        </ul>
+
+        <input type="text" placeholder="  Search destinations" id="search_input">
+        
+        <i class="fa fa-search" aria-hidden="true" id="search"></i>
+		 
+	
+
+   </nav>
+
+
 
 
 <!--<%= link_to "Home", root_path %>
