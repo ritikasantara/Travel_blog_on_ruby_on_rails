@@ -6,6 +6,24 @@
 
 $color-search: sandybrown
 
+*
+
+    margin: 0
+    padding: 0
+
+a
+
+    text-decoration: none
+    color: inherit    
+
+    
+html,body
+
+    height: 2000px
+    font-family: 'Titillium Web', sans-serif
+
+
+
 .post_wrapper
 
     display: none
@@ -29,16 +47,7 @@ $color-search: sandybrown
         width: 550px
         height: 200px
 
-*
 
-    margin: 0
-    padding: 0
-
-    
-html,body
-
-    height: 2000px
-    font-family: 'Titillium Web', sans-serif
 
  
 /* navigation bar */
@@ -130,6 +139,7 @@ nav
     position: relative
     margin: -50px auto
     color: #003333
+    z-index: 4
     box-shadow: 0px 1px 9px 0px #696969
 
     #label-para-1
@@ -151,24 +161,45 @@ nav
 
 /* Blog Posts */
 
+
+
+
 .blog_posts
 
-    background: url(everest2.jpg) center center
+    background: url(everest2.jpg) top center
     background-size: cover
     display: flex
     flex-direction: row
     justify-content: center
-    height: 900px
+    height: 820px 
+    position: relative
+    z-index: 1
 
     
-    #latest_blogs_title
+    #blog_post_title
 
-        
-        font-size: 30px
-        text-shadow: 1px 2px 1px 1px #eee
-        margin-top: 90px
-        margin-left: 50%
-        clear: both
+        margin: 0 auto
+        position: absolute
+        top: 105px
+
+        .inset-text-effect 
+
+            display: inline-block
+            box-sizing: content-box
+            border: none
+            text-align: center
+            text-transform: normal
+            text-overflow: clip
+            white-space: pre
+            text-shadow: 1px 1px 0 #003333 , -1px -1px 1px #fff
+
+
+        #latest_blogs_title
+
+            font-size: 30px
+            font-weight: bold
+            color: #003333
+            
 
     #paragraph
         
@@ -190,11 +221,11 @@ nav
         background-color: #eee
         color: #003333
         width: 300px
-        height: 500px
+        height: 470px
         box-shadow: 0px 1px 9px 0px #696969
         margin-right: 30px
         margin-left: 30px
-        margin-top: 150px
+        margin-top: 200px
         float: left
 
 
@@ -205,11 +236,11 @@ nav
         background-color: #eee
         color: #003333      
         width: 300px
-        height: 500px
+        height: 470px
         box-shadow: 0px 1px 9px 0px #696969
         margin-right: 30px
         margin-left: 30px
-        margin-top: 150px
+        margin-top: 200px
         float: left  
 
     .post3
@@ -218,11 +249,11 @@ nav
         background-color: #eee
         color: #003333    
         width: 300px
-        height: 500px
+        height: 470px
         box-shadow: 0px 1px 9px 0px #696969
         margin-right: 30px
         margin-left: 30px
-        margin-top: 150px
+        margin-top: 200px
         float: left
 
 

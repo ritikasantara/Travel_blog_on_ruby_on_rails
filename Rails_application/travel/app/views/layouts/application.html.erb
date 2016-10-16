@@ -55,41 +55,48 @@
 
 <!-- Latest Blog Posts -->
 
+
+
+
+
 <div class="blog_posts">
 
+<div id="blog_post_title">
 
-   <p id="latest_blogs_title">LATEST BLOG POSTS</p>
+     <p id="latest_blogs_title" class="inset-text-effect">LATEST BLOG POSTS</p>
+
+</div> 
  
-   <div class="post1">
-        
-        <%= image_tag('image2.jpg', :width => 300, :height => 200, :alt => 'post_image') %>
+    <div class="post1">
+          
+          <%= image_tag('image2.jpg', :width => 300, :height => 200, :alt => 'post_image') %>
 
-        <div id="paragraph"><p>Lorem ipsum dolor sit amet, ne nam quaeque invenire, cum utinam adolescens ut, sit graece aeterno eu. Vim accumsan apeirian an. Per duis viris ut, cu denique invidunt gloriatur sea. Cum ei cetero definitionem conclusionemque. Vim cu dolorum deterruisset, at mea </p></div>
+          <div id="paragraph"><p>Lorem ipsum dolor sit amet, ne nam quaeque invenire, cum utinam adolescens ut, sit graece aeterno eu. Vim accumsan apeirian an. Per duis viris ut, cu denique invidunt gloriatur sea. Cum ei cetero definitionem conclusionemque. Vim cu dolorum deterruisset, at mea </p></div>
 
-        <p id="read_post">Read More ></p>
-
-
-
-   </div>
-
-   <div class="post2">
-
-        <%= image_tag('image7.jpg', :width => 300, :height => 200, :alt => 'post_image') %>
-        <div id="paragraph"><p>Lorem ipsum dolor sit amet, ne nam quaeque invenire, cum utinam adolescens ut, sit graece aeterno eu. Vim accumsan apeirian an. Per duis viris ut, cu denique invidunt gloriatur sea. Cum ei cetero definitionem conclusionemque. Vim cu dolorum deterruisset, at mea </p></div>
-
-        <p id="read_post">Read More ></p>
-
-   </div>
+          <p id="read_post"><%= link_to 'READ MORE >', root_path %></p>
 
 
-   <div class="post3">
 
-        <%= image_tag('image9.jpg', :width => 300, :height => 200, :alt => 'post_image') %>
-        <div id="paragraph"><p>Lorem ipsum dolor sit amet, ne nam quaeque invenire, cum utinam adolescens ut, sit graece aeterno eu. Vim accumsan apeirian an. Per duis viris ut, cu denique invidunt gloriatur sea. Cum ei cetero definitionem conclusionemque. Vim cu dolorum deterruisset, at mea </p></div>
+    </div>
 
-        <p id="read_post">Read More ></p>
+    <div class="post2">
 
-   </div>
+          <%= image_tag('image7.jpg', :width => 300, :height => 200, :alt => 'post_image') %>
+          <div id="paragraph"><p>Lorem ipsum dolor sit amet, ne nam quaeque invenire, cum utinam adolescens ut, sit graece aeterno eu. Vim accumsan apeirian an. Per duis viris ut, cu denique invidunt gloriatur sea. Cum ei cetero definitionem conclusionemque. Vim cu dolorum deterruisset, at mea </p></div>
+
+          <p id="read_post"><%= link_to 'READ MORE >', root_path %></p>
+
+    </div>
+
+
+    <div class="post3">
+
+          <%= image_tag('image9.jpg', :width => 300, :height => 200, :alt => 'post_image') %>
+          <div id="paragraph"><p>Lorem ipsum dolor sit amet, ne nam quaeque invenire, cum utinam adolescens ut, sit graece aeterno eu. Vim accumsan apeirian an. Per duis viris ut, cu denique invidunt gloriatur sea. Cum ei cetero definitionem conclusionemque. Vim cu dolorum deterruisset, at mea </p></div>
+
+          <p id="read_post"><%= link_to 'READ MORE >', root_path %></p>
+
+    </div>
 
 
 
