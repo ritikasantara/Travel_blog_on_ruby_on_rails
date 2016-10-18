@@ -40,12 +40,15 @@ html,body
     .logo
 
         position: absolute
-        top: calc(50% - 90)
-        left: calc(50% - 270px)
-        background: url(Logomakr_4Hskaf.png) center fixed no-repeat
-        background-attachment: fixed
-        width: 550px
-        height: 200px
+        top: 100px
+        margin: 0 auto
+        color: #fff
+        font-size: 30px
+        border: 7px solid #ccc
+        border-radius: 6px
+        padding: 30px
+      
+        
 
 
 
@@ -54,7 +57,7 @@ html,body
 
 
 nav
-
+  
     position: fixed
     top: 0
     left: 0
@@ -68,16 +71,16 @@ nav
 
 
 
-    li
+    li.menu
 
         list-style-type: none
         float: left
-    
+        position: relative 
+        color: #000  
+        cursor: pointer 
 
-    a
+    #anchor_menu
 
-        text-decoration: none
-        color: #000
         padding: 5px 10px
         border-radius: 2px
         background-color: rgba(200,213,213,0.5)
@@ -85,13 +88,53 @@ nav
         line-height: 50px
 
 
-    a:hover
+    #anchor_menu:hover
   
         background-color: rgba(200,223,213,0.5)
 
 
+    ul.dropdown
 
- 
+        position: absolute
+        top: 100%
+        left: 30px
+        width: 150%
+        opacity: 0.8
+        cursor: pointer
+
+        > li
+            
+            list-style-type: none
+            background: #332d2d
+            padding: 20px 20px
+            font-size: 13px
+          
+            
+
+            &:hover
+                
+                background: #666 
+                opacity: 1
+
+            &:last-child
+
+                border-radius: 0 0 5px 5px
+
+            #anchor_submenu
+
+
+                color: rgba(255, 255, 255, 1)
+                
+
+        
+    ul.dropdown li
+
+        display: none
+
+    li:hover > ul.dropdown li
+
+        display: block
+
 
 
 /* search input box */
@@ -102,8 +145,8 @@ nav
     padding: 10px 15px
     height: 20px
     width: 160px
-    font-size: 12px
-    color: #fff
+    font-size: 13px
+    color: #000
     float: right
     margin-top: 4px
     margin-right: 40px
@@ -166,7 +209,8 @@ nav
 
 .blog_posts
 
-    background: url(everest2.jpg) top center
+    background: url(balloons.jpg) top center
+    background-attachment: fixed
     background-size: cover
     display: flex
     flex-direction: row
