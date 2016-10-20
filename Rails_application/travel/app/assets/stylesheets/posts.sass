@@ -10,6 +10,7 @@ $color-search: sandybrown
 
     margin: 0
     padding: 0
+    box-sizing: border-box
 
 a
 
@@ -33,7 +34,7 @@ html,body
 .header_image
 
     position: relative
-    background: url(image1.jpg)  center
+    background: url(balloons.jpg)  center
     background-size: cover
     height: 70vh
 
@@ -41,10 +42,11 @@ html,body
 
         position: absolute
         top: 100px
-        left: calc(50% - 140px)
-        background: fade-out(#fff, 0.7) 
-        color: #fff
-        font-size: 30px
+        left: calc(50% - 250px)
+        background: fade-out(#eee, 0.7) 
+        color: #696969
+        font-family: 'Bungee Inline', cursive
+        font-size: 60px
         border: 4px solid fade-out(#fff, 0.7)
         border-radius: 6px
       
@@ -67,7 +69,7 @@ nav
     left: 0
     height: 50px
     width: 100%
-    background-color: rgba(200,200,200,.5)
+    background-color: rgba(0,0,0,.5)
     z-index: 99
     font-size: 15px
     clear: both
@@ -146,9 +148,9 @@ nav
 #search_input
 
     background-color: transparent
-    padding: 10px 15px
+    padding: 20px 20px
     height: 20px
-    width: 160px
+    width: 180px
     font-size: 13px
     color: #000
     float: right
@@ -258,7 +260,9 @@ nav
 
 .blog_posts
 
-    background: url(balloons.jpg) top center
+    background: url(everest2.jpg) top center
+    width: 80%
+    margin: 0 auto
     background-attachment: fixed
     background-size: cover
     display: flex
@@ -273,6 +277,11 @@ nav
 
         margin: 0 auto
         position: absolute
+        background: fade-out(#696969, 0.7)
+        border: 4px solid fade-out(#fff, 0.7)
+        font-family: 'Vast Shadow', cursive
+        border-radius: 2px
+        padding: 20px 30px
         top: 105px
 
         .inset-text-effect 
@@ -284,14 +293,14 @@ nav
             text-transform: normal
             text-overflow: clip
             white-space: pre
-            text-shadow: 1px 1px 0 #003333 , -1px -1px 1px #fff
+            text-shadow: 1px 1px 0 #ccc , -1px -1px 1px #fff
 
 
         #latest_blogs_title
 
             font-size: 30px
             font-weight: bold
-            color: #003333
+            color: #696969
             
 
     #paragraph
@@ -318,7 +327,7 @@ nav
         box-shadow: 0px 1px 9px 0px #696969
         margin-right: 30px
         margin-left: 30px
-        margin-top: 200px
+        margin-top: 250px
         float: left
 
 
@@ -333,7 +342,7 @@ nav
         box-shadow: 0px 1px 9px 0px #696969
         margin-right: 30px
         margin-left: 30px
-        margin-top: 200px
+        margin-top: 250px
         float: left  
 
     .post3
@@ -346,8 +355,91 @@ nav
         box-shadow: 0px 1px 9px 0px #696969
         margin-right: 30px
         margin-left: 30px
-        margin-top: 200px
+        margin-top: 250px
         float: left
 
+/* Popular travel tips */
 
-         
+
+.post-title
+
+    margin: 40px auto
+    background: fade-out(#696969, 0.7)
+    display: block
+    width: 40%
+    border: 4px solid fade-out(#fff, 0.7)
+    font-family: 'Vast Shadow', cursive
+    border-radius: 2px
+    padding: 20px 30px
+        
+
+
+    #popular-tips
+
+        font-size: 23px
+        font-weight: bold
+        color: #696969
+        text-align: center
+        text-transform: normal
+        text-overflow: clip
+        white-space: pre
+        text-shadow: 1px 1px 0 #ccc , -1px -1px 1px #fff
+        
+  
+.travel-tips
+
+    display: block
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    width: 100%
+
+
+    .ultimate-guide
+
+        background: url(image1.jpg) 
+        background-size: cover
+        float: left
+        width: 250px
+        height: 150px
+
+    
+    .travel-insurance 
+
+        background: url(image7.jpg) 
+        background-size: cover
+        width: 250px
+        height: 150px
+
+    .cheap-flight
+
+
+        background: url(lake.jpg) 
+        background-size: cover
+        width: 250px
+        height: 150px
+
+    .travel-awesome  
+
+
+        background: url(imagee4.jpg) 
+        background-size: cover
+        width: 250px
+        height: 150px 
+
+
+    .running  
+
+        background: url(image8.jpg) 
+        background-size: cover
+        width: 250px
+        height: 200px  
+
+
+    .travel-creditcard
+
+
+        background: url(image9.jpg) 
+        background-size: cover
+        width: 250px
+        height: 200px
