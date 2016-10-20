@@ -7,7 +7,24 @@
   <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Titillium+Web' %>
   <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Open+Sans' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'http://blurjs.com/blur.min.js' %>
   <%= csrf_meta_tags %>
+
+  <script type="text/javascript">
+
+   $(function(){
+
+    $('.logo').blurjs({
+
+        overlay: rgba(255, 255, 255. 0.3);
+        radius: 20;
+    });
+
+   });
+
+
+</script>
+
 </head>
 
 <body>
@@ -15,7 +32,7 @@
 
 <div class="header_image">
     
-    <div class="logo">TRAVELOGUE</div>
+    <div class="logo"><p>TRAVELOGUE</p></div>
 
 </div>
 
@@ -73,9 +90,9 @@
 
    <div class="subscription_form">
        
-       <input type="text" placeholder=" First Name">
+       <input type="text" placeholder=" First Name" id="text-box">
 
-       <input type="email" placeholder=" Email">
+       <input type="email" placeholder=" Email" id="email-box">
 
        <select id="countries">
             
@@ -185,7 +202,7 @@
 
        </select>
        
-       <input type="submit">GET TRAVEL TIPS
+      <%= submit_tag("GET TRAVEL TIPS", :id=>"submit-form") %>
 
    </div>
 
