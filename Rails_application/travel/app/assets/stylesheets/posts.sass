@@ -34,9 +34,12 @@ html,body
 .header_image
 
     position: relative
-    background: url(balloons.jpg)  center
+    background: url(header.jpg)  
+    background-repeat: no-repeat
     background-size: cover
-    height: 70vh
+    height: 60vh
+
+    animation: slider 10s infinite alternate
 
     .logo
 
@@ -44,17 +47,34 @@ html,body
         top: 100px
         left: calc(50% - 250px)
         background: fade-out(#eee, 0.7) 
-        color: #696969
+        color: #fff
         font-family: 'Bungee Inline', cursive
         font-size: 60px
         border: 4px solid fade-out(#fff, 0.7)
         border-radius: 6px
-      
-      
-        p
+    
+    
+    p
 
-            
-            padding: 30px 20px
+        
+        padding: 30px 20px
+
+@keyframes slider
+
+
+    from    
+ 
+        background-size: 1920px
+        background-position: left center
+
+    to
+
+        background-position: right top
+        background-size: 1920px    
+
+
+        
+
 
 
 
@@ -260,7 +280,7 @@ nav
 
 .blog_posts
 
-    background: url(everest2.jpg) top center
+    background: url(balloons.jpg) center center
     width: 80%
     margin: 0 auto
     background-attachment: fixed
