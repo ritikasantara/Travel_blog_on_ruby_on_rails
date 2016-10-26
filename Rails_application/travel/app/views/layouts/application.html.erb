@@ -12,7 +12,6 @@
   <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Dorsa' %>
   <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Wire+On' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'http://blurjs.com/blur.min.js' %>
   <%= csrf_meta_tags %>
 
 
@@ -357,7 +356,141 @@
 
    </div>
 
-   <div class="gsllery-container">
+
+   <!-- Gallery -->
+
+    <div class="post-title">
+
+      <p id="paragraph-title">GALLERY</p>
+
+   </div>
+
+   <div class="gallery-container">
+
+      <!-- Section 1--> 
+         
+         <div class="section section-1">
+
+
+            <div class="column-1">
+
+
+                 <div class="small image-1">
+
+                     <%= link_to(image_tag("gallery-image1.jpg", :alt => 'image1', :id => 'image_1'),  root_path ) %>
+
+                 </div>
+
+                 <div class="small image-2">
+
+                    <%= link_to(image_tag("gallery-image2.jpg", :alt => 'image2', :id => 'image_2'),  root_path ) %>
+
+                 </div>
+
+
+            </div>
+
+
+            <div class="column-2">
+
+                <div class="normal image-3">
+
+                    <%= link_to(image_tag("gallery-image3.jpg", :alt => 'image3', :id => 'image_3'),  root_path ) %>
+              
+
+                </div>
+
+            </div>
+
+
+         </div>
+
+      <!-- Section 2 -->
+
+         <div class="section section-2"> 
+
+            <div class="column-3">
+
+               <div class="section section-3">
+
+                    <div class="column-4">
+
+                          <div class="large image-4">
+
+                                  <%= link_to(image_tag("gallery-image4.jpg", :alt => 'image4', :id => 'image_4'),  root_path ) %>
+
+                          </div>
+
+                    </div>
+
+
+                    <div class="column-5">
+
+                          <div class="small image-5">
+
+                                    <%= link_to(image_tag("gallery-image5.jpg", :alt => 'image5', :id => 'image_5'),  root_path ) %>
+
+                          </div>
+
+                          <div class="small image-6">
+
+                                    <%= link_to(image_tag("gallery-image6.jpg", :alt => 'image6', :id => 'image_6'),  root_path ) %>
+
+                          </div>
+
+
+
+                    </div>
+
+                 
+
+
+               </div>
+
+               <div class="normal image-7">
+
+                  <%= link_to(image_tag("gallery-image7.jpg", :alt => 'image7', :id => 'image_7'),  root_path ) %>
+
+               </div>
+
+
+            </div>
+
+
+           
+
+         <div class="column-6">
+
+             <div class="small image-8">
+
+                  <%= link_to(image_tag("gallery-image8.jpg", :alt => 'image8', :id => 'image_8'),  root_path ) %>
+
+             </div>
+
+             <div class="large image-9">
+                   
+                  <%= link_to(image_tag("gallery-image9.jpg", :alt => 'image9', :id => 'image_9'),  root_path ) %>
+
+             </div>
+
+             <div class="small image-10">
+                  
+                  <%= link_to(image_tag("gallery-image10.jpg", :alt => 'image10', :id => 'image_10'),  root_path ) %>
+
+             </div>
+
+
+         </div>
+
+
+    </div>
+
+
+
+
+
+
+
 
 
 
