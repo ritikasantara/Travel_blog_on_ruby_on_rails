@@ -84,8 +84,8 @@ html,body
 
 nav
   
-    position: fixed
-    top: 0
+    position: relative
+    top: -50px
     left: 0
     height: 50px
     width: 100%
@@ -206,7 +206,7 @@ nav
     width: 900px
     height: 300px
     position: relative
-    margin: -50px auto
+    margin: 0px auto
     color: #003333
     z-index: 4
     box-shadow: 0px 1px 9px 0px #696969
@@ -282,9 +282,10 @@ nav
 
     background: url(balloons.jpg) center center
     width: 80%
-    margin: 0 auto
+    margin: 50px auto
     background-attachment: fixed
-    background-size: cover
+    bacground-repeat: no-repeat
+    background-size: auto
     display: flex
     flex-direction: row
     justify-content: center
@@ -397,7 +398,7 @@ nav
         
 
 
-    #paragraph-title
+    .paragraph-title
 
         font-size: 23px
         font-weight: bold
