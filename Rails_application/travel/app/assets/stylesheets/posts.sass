@@ -5,6 +5,7 @@
 @import normalize
 
 $color-search: sandybrown
+$gallery-p-color: #000
 
 *
 
@@ -495,6 +496,14 @@ nav
     height: 200px
     overflow: hidden
     padding: 15px
+    transition: all 1s
+    
+
+   
+
+
+
+
     
 
 
@@ -504,6 +513,7 @@ nav
     height: 400px 
     overflow: hidden
     padding: 15px
+   
 
 
 .large
@@ -513,6 +523,7 @@ nav
     height: 400px
     overflow: hidden
     padding: 15px
+    
 
 
 .gallery-container 
@@ -533,30 +544,14 @@ nav
         display: flex 
         position: relative
 
-        .gallery-p
-
-            position: absolute
-            bottom: 0
-            left: 0
-            height: 20%
-            background: rgba(0,0,0,0.5)
-            transition: all 0.33s ease-out
-            display: none
-                   
-/* Gallery transition effect */
-
-
-
-.gallery-images:hover .gallery-p
-
-    display: block
-
 
 
 /* Gallery Modal */
 
 
+.gallery-p
 
+    display: none
 
 
 
