@@ -377,15 +377,13 @@
 
                  <div class="small image-1">
 
-                     <%= link_to(image_tag("gallery-image1.jpg", :alt => 'image1', :class => 'gallery-images',  :id => 'image_1'),  root_path ) %>
-                     <p class="gallery-p">Lorem ipsum dolor....</p>
-
+                     <a href="#modal-img-1"><img src="assets/gallery-image1.jpg"></a>
+                  
                  </div>
 
                  <div class="small image-2">
 
-                    <%= link_to(image_tag("gallery-image2.jpg", :alt => 'image2', :class => 'gallery-images',  :id => 'image_2'),  root_path ) %>
-                    <p class="gallery-p">Lorem ipsum dolor....</p>
+                    <a href="#"><img src="assets/gallery-image2.jpg"></a>
 
                  </div>
 
@@ -397,8 +395,7 @@
 
                 <div class="normal image-3">
 
-                    <%= link_to(image_tag("gallery-image3.jpg", :alt => 'image3', :class => 'gallery-images',  :id => 'image_3'),  root_path ) %>
-                    <p class="gallery-p">Lorem ipsum dolor....</p>
+                    <a href="#"><img src="assets/gallery-image3.jpg"></a>
 
                 </div>
 
@@ -419,8 +416,7 @@
 
                           <div class="large image-4">
 
-                                  <%= link_to(image_tag("gallery-image4.jpg", :alt => 'image4', :class => 'gallery-images',  :id => 'image_4'),  root_path ) %>
-                                  <p class="gallery-p">Lorem ipsum dolor....</p>
+                                  <a href="#"><img src="assets/gallery-image4.jpg"></a>
 
                           </div>
 
@@ -431,15 +427,13 @@
 
                           <div class="small image-5">
 
-                                    <%= link_to(image_tag("gallery-image5.jpg", :alt => 'image5', :class => 'gallery-images',  :id => 'image_5'),  root_path ) %>
-                                    <p class="gallery-p">Lorem ipsum dolor....</p>
+                                    <a href="#"><img src="assets/gallery-image5.jpg"></a>
 
                           </div>
 
                           <div class="small image-6">
 
-                                    <%= link_to(image_tag("gallery-image6.jpg", :alt => 'image6', :class => 'gallery-images',  :id => 'image_6'),  root_path ) %>
-                                    <p class="gallery-p">Lorem ipsum dolor....</p>
+                                   <a href="#"><img src="assets/gallery-image6.jpg"></a>
 
                           </div>
 
@@ -454,8 +448,7 @@
 
                <div class="normal image-7">
 
-                       <%= link_to(image_tag("gallery-image7.jpg", :alt => 'image7', :class => 'gallery-images',  :id => 'image_7'),  root_path ) %>
-                       <p class="gallery-p">Lorem ipsum dolor....</p>
+                       <a href="#"><img src="assets/gallery-image7.jpg"></a>
 
                </div>
 
@@ -469,22 +462,19 @@
 
              <div class="small image-8">
 
-                       <%= link_to(image_tag("gallery-image8.jpg", :alt => 'image8', :class => 'gallery-images',  :id => 'image_8'),  root_path ) %>
-                       <p class="gallery-p">Lorem ipsum dolor....</p>
+                       <a href="#"><img src="assets/gallery-image8.jpg"></a>
 
              </div>
 
              <div class="large image-9">
                    
-                       <%= link_to(image_tag("gallery-image9.jpg", :alt => 'image9', :class => 'gallery-images',  :id => 'image_9'),  root_path ) %>
-                       <p class="gallery-p">Lorem ipsum dolor....</p>
+                       <a href="#"><img src="assets/gallery-image9.jpg"></a>>
 
              </div>
 
              <div class="small image-10">
                   
-                  <%= link_to(image_tag("gallery-image10.jpg", :alt => 'image10', :class => 'gallery-images',  :id => 'image_10'),  root_path ) %>
-                  <p class="gallery-p">Lorem ipsum dolor....</p>
+                  <a href="#"><img src="assets/gallery-image10.jpg"></a>
                   
              </div>
 
@@ -495,17 +485,35 @@
     </div>
 
 
+ </div>
+
+<!-- Modal Box -->
+
+<div class="modal" id="modal-img-1">
 
 
+   <div class="modal-images">
 
+       <a href=""><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
 
-
-
-
-
-
+       <a href=""><img src="assets/gallery-image1.jpg"></a>
+       
+       <a href=""><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
 
    </div>
+
+   <a href="" id="close"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a>
+
+
+</div>
+
+
+
+
+
+
+
+  
 
 <!--<%= link_to "Home", root_path %>
 <%= link_to "New Post", new_post_path %>-->
