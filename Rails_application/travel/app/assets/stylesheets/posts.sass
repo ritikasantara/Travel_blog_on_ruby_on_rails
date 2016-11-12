@@ -634,11 +634,11 @@ footer
 
     background: #fff
     position: relative
+    top: 30px
     height: 350px
-    display: flex
-    justify-content: space-around
     font-family: 'Open sans',sans-serif
     color: #fff
+
 
     &:before
 
@@ -651,6 +651,14 @@ footer
         background: url(footer_background.jpg) no-repeat
         background-position: center center
         opacity: 0.9
+
+    .footer_stuffs
+
+        padding-top: 20px
+        display: flex
+        justify-content: space-around
+
+
        
 
     p
@@ -665,6 +673,12 @@ footer
     li,#input_footer,.icons_footer
 
         margin-top: 15px
+
+
+    li:hover
+
+        color: #696969
+
 
     #input_footer
 
@@ -688,6 +702,10 @@ footer
 
             box-shadow: none
 
+        &:hover
+
+            color: darken(steelblue, 10%)
+
 
 
     ul,li,p,div,span
@@ -698,8 +716,7 @@ footer
 
     .copyright
 
-        clear: both
-        display: block
+        padding-top: 30px
         text-align: center
         color: #fff
         font-size: 13px
