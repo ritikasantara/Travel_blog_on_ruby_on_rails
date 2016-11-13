@@ -289,18 +289,23 @@ nav
 
 .blog_posts
 
-    background: url(balloons.jpg) center center
+    background: url(posts_background.jpg) center center
     width: 80%
     margin: 50px auto
     background-attachment: fixed
     bacground-repeat: no-repeat
     background-size: auto
-    display: flex
-    flex-direction: row
-    justify-content: center
+
     height: 820px 
     position: relative
     z-index: 1
+
+    .blog_post_stuffs
+
+        display: flex
+        flex-direction: row
+        justify-content: center
+
 
     
     #blog_post_title
@@ -638,6 +643,7 @@ footer
     height: 350px
     font-family: 'Open sans',sans-serif
     color: #fff
+    padding-top: 20px
 
 
     &:before
@@ -654,9 +660,17 @@ footer
 
     .footer_stuffs
 
-        padding-top: 20px
         display: flex
         justify-content: space-around
+
+
+
+
+    ul,li,p,div,span
+
+        list-style: none
+        opacity: 1
+        position: relative
 
 
        
@@ -708,15 +722,9 @@ footer
 
 
 
-    ul,li,p,div,span
-
-        list-style: none
-        opacity: 1
-        position: relative
-
     .copyright
 
-        padding-top: 30px
+        padding-top: 60px
         text-align: center
         color: #fff
         font-size: 13px
