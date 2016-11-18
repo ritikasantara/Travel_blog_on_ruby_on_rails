@@ -11,9 +11,10 @@
 @import 'https://fonts.googleapis.com/css?family=Dorsa'
 @import 'https://fonts.googleapis.com/css?family=Wire+On'
 @import 'https://fonts.googleapis.com/css?family=Vast+Shadow'
+@import variables
+@import mixins
 
-$color-search: sandybrown
-$gallery-p-color: #000
+
 
 *
 
@@ -47,8 +48,8 @@ html,body
     background-repeat: no-repeat
     background-size: cover
     height: 60vh
-
     animation: slider 10s infinite alternate
+    transition: slider 10s ease-out
 
     .logo
 
@@ -61,6 +62,7 @@ html,body
         font-size: 60px
         border: 4px solid fade-out(#fff, 0.7)
         border-radius: 6px
+        text-shadow: 1px 1px lighten($dark-grey,2%),2px 2px lighten($dark-grey, 5%),3px 3px lighten($dark-grey, 7%),4px 4px lighten($dark-grey, 10%),5px 5px lighten($dark-grey, 12%),6px 6px lighten($dark-grey, 15%),7px 7px lighten($dark-grey, 17%), 8px 8px lighten($dark-grey, 19%)
     
     
     p
@@ -295,7 +297,6 @@ nav
     background-attachment: fixed
     bacground-repeat: no-repeat
     background-size: auto
-
     height: 820px 
     position: relative
     z-index: 1
@@ -336,6 +337,8 @@ nav
             font-size: 30px
             font-weight: bold
             color: #696969
+            text-shadow: 1px 1px 0 #ccc , 1px 1px lighten($blue-color,2%),2px 2px lighten($blue-color, 10%),3px 3px lighten($blue-color, 18%),4px 4px lighten($blue-color, 17%)
+            
             
 
     #paragraph
@@ -426,6 +429,8 @@ nav
     font-family: 'Vast Shadow', cursive
     border-radius: 2px
     padding: 20px 30px
+   
+    
         
 
 
@@ -438,7 +443,8 @@ nav
         text-transform: normal
         text-overflow: clip
         white-space: pre
-        text-shadow: 1px 1px 0 #ccc , -1px -1px 1px #fff
+        text-shadow: 1px 1px 0 #ccc , 1px 1px lighten($blue-color,2%),2px 2px lighten($blue-color, 10%),3px 3px lighten($blue-color, 18%),4px 4px lighten($blue-color, 17%)
+         
         
   
 .travel-tips
@@ -520,44 +526,6 @@ nav
 /* Gallery */
 
 
-.small
-
-    width: 250px
-    height: 200px
-    overflow: hidden
-    padding: 15px
-    transition: all 1s
-    
-
-.small-modal
-
-
-    width: 350px
-    height: 300px
-    overflow: hidden
-    padding: 0
-   
-
-
-
-
-.normal
-
-    width: 500px
-    height: 400px 
-    overflow: hidden
-    padding: 15px
-   
-
-
-.large
-
-
-    width: 250px
-    height: 400px
-    overflow: hidden
-    padding: 15px
-    
 
 
 .gallery-container 
@@ -566,17 +534,108 @@ nav
     margin: 0 auto
 
 
-    img
-
-        display: inline-block
-        width: 100%
-        height: 100%
-        box-shadow: 0 0 0 6px #fff,0 4px 15px 5px rgba(0, 0, 0, 0.5)  
-
     .section
 
-        display: flex 
+        +display(flex) 
         position: relative
+
+
+        img
+
+            display: inline-block
+            width: 100%
+            height: 100%
+            box-shadow: 0 0 0 6px $white,0 4px 15px 5px rgba(0, 0, 0, 0.5)  
+
+
+
+        .small
+
+            +small-dimensions(250px,200px)
+            overflow: hidden
+            padding: 15px
+            position: relative
+
+
+            .image-overlay
+
+                width: calc(100% - 30px)
+                height: calc(30% - 15px)
+                background: rgba(0,0,0,0.6)
+                position: absolute
+                left: 15px
+                bottom: 15px
+
+                p 
+
+                    text-align: center
+                    font-size: 12px
+                    color: $white
+                    line-height: 39px
+                    font-style: italic
+                    font-family: 'Open sans', sans-serif
+            
+            
+
+
+        .normal
+
+            +normal-dimensions(500px,400px)
+            overflow: hidden
+            padding: 15px
+            position: relative
+
+
+            .image-overlay
+
+                width: calc(100% - 30px)
+                height: calc(15% - 15px)
+                background: rgba(0,0,0,0.6)
+                position: absolute
+                left: 15px
+                bottom: 15px
+
+                p 
+
+                    text-align: center
+                    font-size: 12px
+                    color: $white
+                    line-height: 39px
+                    font-style: italic
+                    font-family: 'Open sans', sans-serif
+
+
+        
+
+
+        .large
+
+
+            +large-dimensions(250px,400px)
+            overflow: hidden
+            padding: 15px
+            position: relative
+
+
+            .image-overlay
+
+                width: calc(100% - 30px)
+                height: calc(15% - 15px)
+                background: rgba(0,0,0,0.6)
+                position: absolute
+                left: 15px
+                bottom: 15px
+
+                p 
+
+                    text-align: center
+                    font-size: 12px
+                    color: $white
+                    line-height: 45px
+                    font-style: italic
+                    font-family: 'Open sans', sans-serif
+
+
 
 
 
@@ -587,12 +646,12 @@ nav
 
 footer
 
-    background: #fff
+    background: $white
     position: relative
     top: 30px
     height: 350px
     font-family: 'Open sans',sans-serif
-    color: #fff
+    color: $white
     padding-top: 20px
 
 
@@ -610,7 +669,7 @@ footer
 
     .footer_stuffs
 
-        display: flex
+        +display(flex)
         justify-content: space-around
 
 
@@ -628,7 +687,7 @@ footer
     p
         
         padding: 15px
-        border-bottom: 1px dashed #fff
+        border-bottom: 1px dashed $white
         margin-left: -15px
         font-size: 20px
         
@@ -641,14 +700,14 @@ footer
 
     li:hover
 
-        color: #696969
+        color: $dark-grey
 
 
     .search_footer input
 
         width: 120%
         height: 50px
-        background: #eee
+        background: $grey
         font-style: italic
         box-shadow: none
         border-radius: 3px
@@ -661,8 +720,8 @@ footer
         border-radius: 4px
         margin-right: 30px
         padding: 10px
-        color: darken(steelblue, 30%)
-        box-shadow: 0px 0px 2px 2px #eee
+        color: darken($blue-color, 30%)
+        box-shadow: 0px 0px 2px 2px $grey
 
         &:active
 
@@ -670,7 +729,7 @@ footer
 
         &:hover
 
-            color: darken(steelblue, 10%)
+            color: darken($blue-color, 10%)
 
 
 
@@ -678,7 +737,7 @@ footer
 
         padding-top: 60px
         text-align: center
-        color: #fff
+        color: $white
         font-size: 13px
 
 
