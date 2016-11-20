@@ -3,18 +3,19 @@
 <%= form_for @post do |f| %>
 
 <p>
-  <%= f.label :title %><br>
-  <%= f.text_field :title %>
+  
+  <%= f.text_field :title, placeholder: "Title of the post" %>
 
 </p>  
 
 <p>
 
-  <%= f.label :body %><br>
-  <%= f.text_area :body %>
+  <%= f.text_area :body, placeholder: "Contents of the post", size: "30x10" %>
+  
+  
 
 </p>
 
-<p>  <%= f.submit %> </p>
+<p>  <%= f.button  "Submit", id: "post_submit"  %> </p>
 
 <% end %>
