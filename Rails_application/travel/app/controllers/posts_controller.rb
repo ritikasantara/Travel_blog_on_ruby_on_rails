@@ -4,7 +4,7 @@ before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
  
-       @posts = Post.all.order("Created_at DESC")
+       @posts = Post.all.order("Created_at DESC").limit(3)
      
   end
 
