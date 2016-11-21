@@ -245,43 +245,58 @@ nav
     font-size: 15px
     color: #003333
     margin-top: 30px
+    margin-left: 20px
     display: flex
     flex-direction: row
-    justify-content: space-around
+    justify-content: center
 
+    input[type='text']
 
+        margin-left: -20px
 
-    #text-box, #email-box
+    input[type='email']
+
+        margin-left: 20px    
+
+    input[type='text'], input[type='email']
 
         background-color: #dcdee0
         width: 15%
         border-radius: 3px 
         padding: 16px 20px
-        -webkit-appearance: none
-        box-shadow: none !important
+        border: none
   
 
 
-    #countries    
+    select   
 
         background-color: #dcdee0
         width: 23%
         border-radius: 2px 
         padding: 16px 
-        -webkit-appearance: none 
+        margin-left: 20px
+        border: none
 
-    #submit-form
 
-        background-color: $orange
+
+    input[type='button']
+
+        background-color: darken($orange, 7%)
         width: 22%
-        color: #fff
-        border-radius: 2px
-        padding: 16px 20px
-        -webkit-appearance: none
-        box-shadow: none !important
+        color: $white
+        border-radius: 4px
+        padding: 17px 20px
+        border: none
+        margin-left: 20px
+        box-shadow: 0px 0px 0px 2px lighten($orange, 6%) inset, 0px 0px 0px 2px $white inset
 
-       
+        &:hover
 
+            box-shadow: none
+            cursor: pointer
+    
+
+    
 
 
 /* Blog Posts */
@@ -405,17 +420,18 @@ nav
 
         clear: both
         padding: 30px
-        background: darken($orange, 5%)
-        border-radius: 3px
-        box-shadow: 0px 0px 0px 1px $orange inset, 0px 0px 0px 2px $white inset
+        background: darken($orange, 7%)
+        border-radius: 4px
+        box-shadow: 0px 0px 0px 2px lighten($orange, 6%) inset, 0px 0px 0px 2px $white inset
         margin: 40px auto  
         text-align: center
         color: $white 
-        cursor: pointer
+        
 
         &:hover
 
             box-shadow: none
+            cursor: pointer
 
 
 /* Popular travel tips */
