@@ -9,6 +9,7 @@
 @import 'https://fonts.googleapis.com/css?family=Dorsa'
 @import 'https://fonts.googleapis.com/css?family=Bungee+Inline'
 @import 'https://fonts.googleapis.com/css?family=Open+Sans'
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'
 @import 'https://fonts.googleapis.com/css?family=Robot'
 @import 'https://fonts.googleapis.com/css?family=Cinzel'
 @import 'https://fonts.googleapis.com/css?family=Wire+On'
@@ -355,7 +356,7 @@ nav
 
         
         color: #003333     
-        font-family: 'Open sans', sans-serif 
+        font-family: 'Open Sans Condensed', sans-serif 
         +display(flex)
         margin: 0px auto
 
@@ -470,7 +471,7 @@ nav
     +flex-wrap(wrap)
     +flex-direction(row)
     +justify-content(center)
-    clear: both
+    +clearfix
     width: 80%
     margin-bottom: 40px
     margin: 0 auto
@@ -724,6 +725,8 @@ footer
 
         width: 120%
         height: 50px
+        font-family: 'Open Sans Condensed', sans-serif
+        font-size: 20px
         background: $grey
         font-style: italic
         box-shadow: none
@@ -761,68 +764,140 @@ footer
     
 /* New Post Page */
 
+nav 
 
-.post_new_page
+    position: absolute
+    top: 0
+    left: 0
+    background: lighten(#31384a, 5%)
+    
+
+.header_new_page
+
+    background: url(balloons.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    height: 300px
+    width: 100vw
+    position: absolute
+    top: 50px
+    left: 0
+
+
+    &:before
+
+        content: -webkit-linear-gradient(top,rgba(255,255,255,0),rgba(0,0,0,1))
+        width: 100%
+        height: 300px
+        opacity: 0.7
+
+    p
+
+        color: $white
+
+
+
+
+
+.post_new_page, .edit_page
 
     background: url(new_post_background.jpg)
+    width: 960px
     background-size: 100% 100%
     background-repeat: no-repeat
+    background-position: top
     background-attachment: fixed
-    margin: auto
+    margin: 220px auto 0px auto
+    position: relative
+    padding: 30px
 
+    &:after
 
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        +filter(blur(10px))
 
-        
+    h1
+
+        font-family: 'Raleway', serif
+        color: darken($orange, 10%)
+        margin: -10px auto 30px auto
+        text-align: center
+
     
     form
 
 
         width: 550px
-        margin: auto
+        height: 80%
+        margin: 60px auto
         background: rgba(0,0,0,0.4)
         border-radius: 5px
-        padding: 30px 30px
+        padding: 50px 30px
 
-        h1
 
-            font-family: 'Raleway', serif
-            color: $white
-            margin: -10px auto 30px auto
-            text-align: center
         
 
-        input,textarea,button
+        input
 
             width: 100%
             margin-bottom: 20px
             padding: 7px
-            font-size: 16px
+            font-size: 20px
+            color: $black
             text-style: italic
             border: none
             border-radius: 2px
+            font-family: 'Open Sans Condensed', sans-serif
 
     textarea
 
-        min-height: 150px
-        max-height: 350px
-        max-width: 100%  
+        min-height: 400px
+        max-height: 450px
+        max-width: 100% 
+        width: 100% 
+        margin-bottom: 20px
+        padding: 7px
+        font-size: 20px
+        color: $black
+        text-style: italic
+        border: none
+        border-radius: 2px
+        font-family: 'Open Sans Condensed', sans-serif
+
 
 
     button
 
-        +background(linear-gradient(top, darken(#31384a, 10%), lighten(#31384a, 10%)))  
+        +background(linear-gradient(top, darken($new-page-blue, 10%), lighten($new-page-blue, 10%)))  
         color: $white 
+        width: 100%
         margin-top: 30px
-        padding: 30px
+        padding: 10px
+        border: none
+        border-radius: 2px
+        font-family: 'Open Sans Condensed', sans-serif
+        font-size: 20px
 
 
         &:hover
 
-            +background(darken(#31384a, 2%))
+            +background(darken($new-page-blue, 2%))
             cursor: pointer
+
+footer
+
+    margin-top: 0px            
     
 
-            
+/* show post page */
+
+
              
            
 
