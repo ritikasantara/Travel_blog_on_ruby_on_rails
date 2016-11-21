@@ -5,6 +5,8 @@
 @import normalize
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'
 @import 'https://fonts.googleapis.com/css?family=Titillium+Web'
+@import 'https://fonts.googleapis.com/css?family=Vast+Shadow'
+@import 'https://fonts.googleapis.com/css?family=Dorsa'
 @import 'https://fonts.googleapis.com/css?family=Bungee+Inline'
 @import 'https://fonts.googleapis.com/css?family=Open+Sans'
 @import 'https://fonts.googleapis.com/css?family=Robot'
@@ -12,8 +14,6 @@
 @import 'https://fonts.googleapis.com/css?family=Wire+On'
 @import 'https://fonts.googleapis.com/css?family=Raleway'
 @import variables
-@import mixins
-
 
 
 *
@@ -466,10 +466,10 @@ nav
   
 .travel-tips
 
-    display: flex
-    flex-wrap: wrap
-    flex-direction: row
-    justify-content: center
+    +display(flex)
+    +flex-wrap(wrap)
+    +flex-direction(row)
+    +justify-content(center)
     clear: both
     width: 80%
     margin-bottom: 40px
@@ -568,7 +568,7 @@ nav
 
         .small
 
-            +small-dimensions(250px,200px)
+            +size(250px 200px)
             overflow: hidden
             padding: 15px
             position: relative
@@ -576,8 +576,8 @@ nav
 
             .image-overlay
 
-                width: calc(100% - 30px)
-                height: calc(30% - 15px)
+                +calc(width, "100% - 30px")
+                +calc(height, "30% - 15px")
                 background: rgba(0,0,0,0.6)
                 position: absolute
                 left: 15px
@@ -597,7 +597,7 @@ nav
 
         .normal
 
-            +normal-dimensions(500px,400px)
+            +size(500px 400px)
             overflow: hidden
             padding: 15px
             position: relative
@@ -605,8 +605,8 @@ nav
 
             .image-overlay
 
-                width: calc(100% - 30px)
-                height: calc(15% - 15px)
+                +calc(width, "100% - 30px")
+                +calc(height, "15% - 15px")
                 background: rgba(0,0,0,0.6)
                 position: absolute
                 left: 15px
@@ -628,7 +628,7 @@ nav
         .large
 
 
-            +large-dimensions(250px,400px)
+            +size(250px 400px)
             overflow: hidden
             padding: 15px
             position: relative
@@ -637,7 +637,7 @@ nav
             .image-overlay
 
                 +calc(width,"100% - 30px")
-                +calc(width,"15% - 15px")
+                +calc(height,"15% - 15px")
                 background: rgba(0,0,0,0.6)
                 position: absolute
                 left: 15px
@@ -810,7 +810,7 @@ footer
 
     button
 
-        background: -webkit-linear-gradient(top, darken(#31384a, 10%), lighten(#31384a, 10%))  
+        +background(linear-gradient(top, darken(#31384a, 10%), lighten(#31384a, 10%)))  
         color: $white 
         margin-top: 30px
         padding: 30px
@@ -818,7 +818,7 @@ footer
 
         &:hover
 
-            background: darken(#31384a, 2%)
+            +background(darken(#31384a, 2%))
             cursor: pointer
     
 
