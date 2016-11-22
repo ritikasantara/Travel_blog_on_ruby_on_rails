@@ -1,9 +1,63 @@
+<!-- navigation bar-->
+
+<nav>
+        
+        <ul>
+
+        <li class="menu"><%= link_to 'START HERE', root_path, :id => "anchor_menu"%>
+            
+            <ul class="dropdown">
+
+                <li><%= link_to 'GET INSPIRED', root_path, :id => "anchor_submenu"%></li>
+                <li><%= link_to 'HOW TO SAVE FOR TRIP', root_path, :id => "anchor_submenu"%></li>
+                <li><%= link_to 'FIND CHEAP AIRFARE', root_path, :id => "anchor_submenu"%></li>
+                <li><%= link_to 'CHEAP ACCOMODATION', root_path, :id => "anchor_submenu"%></li>
+                <li><%= link_to 'COUPLES TRAVEL', root_path, :id => "anchor_submenu"%></li>
+
+
+            </ul>
+        
+        
+        </li>
+
+        <li class="menu"><%= link_to 'TRAVEL', root_path, :id => "anchor_menu" %></li>
+
+        <li class="menu"><%= link_to 'BLOG', root_path, :id => "anchor_menu" %></li>
+
+        <li class="menu"><%= link_to 'DESTINATIONS', root_path, :id => "anchor_menu" %></li>
+
+        <li class="menu"><%= link_to 'ABOUT', root_path, :id => "anchor_menu" %></li>
+
+        <li class="menu"><%= link_to 'GUIDES', root_path, :id => "anchor_menu" %></li>
+
+        <li class="menu"><%= link_to 'CONTACT',root_path, :id => "anchor_menu" %></li>
+
+        </ul>
+
+        <input type="text" placeholder="Search destinations" id="search_input">
+        
+        <i class="fa fa-search" aria-hidden="true" id="search"></i>
+        
+    
+
+</nav>
+
+<div class="header_new_page">
+    
+    <div class="new_header_image"><p><q>Lorem ipsum......</q</p></div>
+
+</div>
+
+
+
+
 <div class="edit_page">
         
 
+    <h1>Edit your post here</h1>
+
     <%= form_for @post do |f| %>
 
-    <h1>Edit your post here</h1>
 
     <p>
     
@@ -26,3 +80,62 @@
 
 
 </div>
+
+<!-- footer-->
+
+<footer>
+
+ <div class="footer_stuffs">
+
+  <div class="about_footer"><p>ABOUT</p>
+
+     <ul>
+
+        <li><%= link_to 'About Travelogue', root_path, :id => "about_submenu"%></li>
+        <li><%= link_to 'Contact', root_path, :id => "contact_submenu"%></li>
+        <li><%= link_to 'Privacy Policy', root_path, :id => "privacy_submenu"%></li>
+
+     </ul>
+
+    </div>
+
+    <div class="travel_tips_footer"><p>TRAVEL TIPS</p>
+
+     <ul>
+
+        <li><%= link_to 'Start Here', root_path, :id => "start_submenu"%></li>
+        <li><%= link_to 'Travel Blog', root_path, :id => "blog_submenu"%></li>
+        <li><%= link_to 'Destination Guides', root_path, :id => "destination_submenu"%></li>
+
+     </ul>
+     
+    </div>
+
+    <div>
+
+        <div class="search_footer"><p>SEARCH</p>
+
+           <input type="text" id="input_footer" placeholder="   Where do you want to go today?">
+        
+        </div>
+
+        <div class="followme_footer">
+
+            <p>FOLLOW ME ON THE WEB</p>
+
+            <span class="round_thumbnail"><a href="#"><i class="fa fa-twitter icons_footer" aria-hidden="true" class ="fa_icon"></i></a></span>
+            <span class="round_thumbnail"><a href="#"><i class="fa fa-instagram icons_footer" aria-hidden="true" class ="fa_icon"></i></a></span>
+            <span class="round_thumbnail"><a href="#"><i class="fa fa-facebook-official icons_footer" aria-hidden="true" class ="fa_icon"></i></a></span>
+            <span class="round_thumbnail"><a href="#"><i class="fa fa-envelope icons_footer" id="envelope" aria-hidden="true" class="fa_icon"></i></a></span>
+
+        
+        </div>
+
+    </div>
+
+   </div> 
+
+    <div class="copyright">&copy; 2016 | Travelogue</div>
+
+
+</footer>

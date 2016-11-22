@@ -224,6 +224,7 @@ nav
     width: 900px
     height: 300px
     position: relative
+    top: -70px
     margin: 0px auto
     color: $text-color
     z-index: 4
@@ -313,9 +314,9 @@ nav
 
 .blog_posts
 
-    background: url(posts_background.jpg) center center
+    background: url(post_background.jpg) center center
     width: 80%
-    margin: 50px auto
+    margin: 0px auto
     background-attachment: fixed
     background-repeat: no-repeat
     background-size: auto
@@ -355,7 +356,7 @@ nav
 
             font-size: 30px
             font-weight: bold
-            color: #696969
+            color: darken($new-page-blue, 5%)
             text-shadow: 1px 1px 0 #ccc , 1px 1px lighten($blue-color,2%),2px 2px lighten($blue-color, 10%),3px 3px lighten($blue-color, 18%),4px 4px lighten($blue-color, 17%)
 
     .blog_post_stuffs
@@ -462,7 +463,7 @@ nav
 
         font-size: 23px
         font-weight: bold
-        color: #696969
+        color: darken($new-page-blue, 5%)
         text-align: center
         text-transform: normal
         text-overflow: clip
@@ -768,7 +769,7 @@ footer
 
 
     
-/* New Post Page */
+/* New Post and Edit Post Page */
 
 nav 
 
@@ -818,15 +819,7 @@ nav
     position: relative
     padding: 30px
 
-    &:after
 
-        content: ""
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        +filter(blur(10px))
 
     h1
 
