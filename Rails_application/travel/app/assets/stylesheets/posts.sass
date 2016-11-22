@@ -117,18 +117,20 @@ nav
         color: #000  
         cursor: pointer 
 
-    #anchor_menu
+        #anchor_menu
 
-        padding: 5px 10px
-        border-radius: 2px
-        background-color: rgba(200,213,213,0.5)
-        margin-left: 30px
-        line-height: 50px
+            padding: 5px 7px
+            border-radius: 2px
+            background-color: rgba(200,213,213,0.5)
+            margin-left: 30px
+            line-height: 50px
 
 
-    #anchor_menu:hover
-  
-        background-color: rgba(200,223,213,0.5)
+            &:hover
+        
+                background-color: rgba(200,223,213,0.5)
+                color: $black
+      
 
 
     ul.dropdown
@@ -136,7 +138,7 @@ nav
         position: absolute
         top: 100%
         left: 30px
-        width: 150%
+        width: 130%
         opacity: 0.8
         cursor: pointer
 
@@ -145,7 +147,8 @@ nav
             list-style-type: none
             background: $li-color
             padding: 20px 20px
-            font-size: 13px
+            font-size: 11px
+            color: $white
           
             
 
@@ -153,15 +156,18 @@ nav
                 
                 background: $li-hover-color 
                 opacity: 1
+                color: $black
+                
+            
 
             &:last-child
 
                 border-radius: 0 0 5px 5px
 
-            #anchor_submenu
 
+             
 
-                color: rgba(255, 255, 255, 1)
+                  
                 
 
         
@@ -729,7 +735,7 @@ footer
         font-size: 20px
         background: $grey
         font-style: italic
-        box-shadow: none
+        border: none
         border-radius: 3px
 
 
@@ -828,6 +834,12 @@ nav
         color: darken($orange, 10%)
         margin: -10px auto 30px auto
         text-align: center
+        background: fade-out($new-page-blue, 0.5)
+        width: 60%
+        border-radius: 3px
+        padding: 20px 30px
+
+ 
 
     
     form
