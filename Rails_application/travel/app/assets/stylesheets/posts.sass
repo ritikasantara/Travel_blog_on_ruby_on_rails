@@ -8,11 +8,13 @@
 @import 'https://fonts.googleapis.com/css?family=Vast+Shadow'
 @import 'https://fonts.googleapis.com/css?family=Dorsa'
 @import 'https://fonts.googleapis.com/css?family=Bungee+Inline'
+@import 'https://fonts.googleapis.com/css?family=Lato'
 @import 'https://fonts.googleapis.com/css?family=Open+Sans'
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'
 @import 'https://fonts.googleapis.com/css?family=Robot'
 @import 'https://fonts.googleapis.com/css?family=Cinzel'
 @import 'https://fonts.googleapis.com/css?family=Wire+On'
+@import 'https://fonts.googleapis.com/css?family=Josefin+Slab'
 @import 'https://fonts.googleapis.com/css?family=Raleway'
 @import variables
 
@@ -33,6 +35,7 @@ html,body
 
     height: 100%
     font-family: 'Titillium Web', sans-serif
+    
 
 
 
@@ -402,7 +405,8 @@ nav
 
         #read_post
 
-            margin-left: 20px  
+            margin-left: 20px
+            margin-top: 30px  
             font-weight: bold  
         
 
@@ -786,7 +790,7 @@ nav
     background-size: cover
     background-position: center
     height: 300px
-    width: 100vw
+    width: 100%
     position: absolute
     top: 50px
     left: 0
@@ -899,18 +903,21 @@ footer
 
 /* show post page */
 
+body
+
+    background: #faf8f2
+    height: 100%
 
              
 .show_post
 
     background: $white
     width: 1000px
-    height: 100%
-    margin: 220px auto 0px auto
+    height: 120vh
+    margin: 240px auto 0px auto
     position: relative
     padding: 10px 110px 10px 110px  
     box-shadow: 0px 1px 9px 0px $dark-grey 
-    margin: 220px auto 0px auto
     position: relative
     +display(flex)
 
@@ -940,10 +947,13 @@ footer
         .body
 
             padding-bottom: 40px
-            color: darken($text-color, 1%)    
-            font-size: 20px
+            color: $black
+            line-height: 1.42857    
+            font-size: 18px
             width: 80%
-            font-family: 'Open Sans Condensed', sans-serif
+            font-family: 'Josefin Slab', serif
+            font-style: italic
+            word-spacing: 2px
 
 
         .edit_button, .delete_button
@@ -960,27 +970,30 @@ footer
     .side_part
 
         width: 20%
+        margin-top: 50px
       
 
         p:nth-child(1)
 
             width: 95%
-            padding: 20px 0px 10px 30px
+            padding: 20px 0px 10px 0px
             text-transform: uppercase
             font-family: 'Open Sans', sans-serif
             color: $dark-grey
             border-bottom: 0.1px dashed $light-grey
             width: 80%
+        
 
         #author_show_page
 
             width: 95%
             font-size: 13px
-            padding: 30px 0px 10px 30px
+            padding: 30px 0px 10px 0px
             font-family: 'Open Sans', sans-serif
             color: $dark-grey
             border-bottom: 0.1px dashed $light-grey
             width: 80%
+
 
         .show_page_icons
 
