@@ -4,13 +4,14 @@ before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
  
-       @posts = Post.all.order("Created_at DESC").limit(3)
+      @posts = Post.all.order("Created_at DESC").limit(3)
      
   end
 
+
   def new
      
-     @post = Post.new
+      @post = Post.new
 
   end
 

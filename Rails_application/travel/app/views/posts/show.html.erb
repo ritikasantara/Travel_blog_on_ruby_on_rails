@@ -4,6 +4,8 @@
         
         <ul>
 
+        <li class="menu"><%= link_to 'HOME', root_path, :id => "anchor_menu" %></li>
+
         <li class="menu"><%= link_to 'START HERE', root_path, :id => "anchor_menu"%>
             
             <ul class="dropdown">
@@ -22,7 +24,7 @@
 
         <li class="menu"><%= link_to 'TRAVEL', root_path, :id => "anchor_menu" %></li>
 
-        <li class="menu"><%= link_to 'BLOG', root_path, :id => "anchor_menu" %></li>
+        <li class="menu"><%= link_to 'BLOG', new_post_path, :id => "anchor_menu" %></li>
 
         <li class="menu"><%= link_to 'DESTINATIONS', root_path, :id => "anchor_menu" %></li>
 
@@ -74,6 +76,7 @@
 
     <div class="side_part">
 
+            <div class="home_icon"><i class="fa fa-home home" aria-hidden="true"></i><%= link_to "Home", root_path %></div>
             <p>share</p>
 
             <div class="show_page_icons">
@@ -86,6 +89,8 @@
             </div>
 
             <p id="author_show_page">Author</p>
+
+
 
     </div>
 
