@@ -197,7 +197,7 @@ nav
     float: right
     margin-top: 4px
     margin-right: 40px
-    border-radius: 10px
+    border-radius: 19px
     border: 1px solid lighten($orange, 10%)
 
 
@@ -913,18 +913,23 @@ body
 
     background: $white
     width: 1000px
-    height: 120vh
+    height: 100%
     margin: 240px auto 0px auto
     position: relative
     padding: 10px 110px 10px 110px  
     box-shadow: 0px 1px 9px 0px $dark-grey 
     position: relative
     +display(flex)
+   
+
+    
+
+        
 
     .post_part
 
         width: 80%
-       
+
 
         .title
 
@@ -934,7 +939,7 @@ body
             border-bottom: 0.01px dashed $light-grey
             width: 60%
 
-     
+
 
         .date
 
@@ -964,17 +969,141 @@ body
             font-family: 'Open Sans Condensed', sans-serif
             color: $white
 
-  
+
 
 
     .side_part
 
         width: 20%
         margin-top: 50px
-      
+    
         .home_icon
 
             color: $text_grey
+
+    
+
+
+        p:nth-child(2)
+
+            width: 95%
+            padding: 30px 0px 10px 0px
+            text-transform: uppercase
+            font-family: 'Open Sans', sans-serif
+            color: $dark-grey
+            border-bottom: 0.1px dashed $light-grey
+            width: 80%
+    
+
+        .show_page_icons
+
+            +display(flex)
+            padding-left: 5px
+            
+            a:nth-child(1)
+
+                padding: 20px 20px 0px 0px
+                color: #007849
+
+            a:nth-child(2)
+
+                padding: 20px 20px 0px 0px
+                color: #813772
+
+            a:nth-child(3)
+
+                padding: 20px 20px 0px 0px
+                color: #078898
+
+            a:nth-child(4)
+
+                padding: 20px 20px 0px 0px
+                color: #ff383f
+
+
+/* Blogs page */
+
+html
+
+    height: 100%
+
+    .show_posts
+
+        background: $white
+        width: 1000px
+        height: 100%
+        margin: 240px auto 0px auto
+        position: relative
+        padding: 10px 110px 10px 110px  
+        box-shadow: 0px 1px 9px 0px $dark-grey 
+        position: relative
+        +display(block)
+        height: 540vh
+
+        .single_posts
+
+            +display(flex)
+            
+    hr
+
+        margin: 40px
+        color: lighten($light-grey, 10%)
+
+    .post_part
+
+        width: 80%
+
+
+        .title
+
+            padding: 10px 0px 10px 0px
+            text-align: left
+            color: lighten($new-page-blue, 2%)
+            border-bottom: 0.01px dashed $light-grey
+            width: 60%
+
+
+
+        .date
+
+            font-size: 15px
+            color: $dark-grey
+            padding-bottom: 40px 
+            font-style: italic 
+            font-family: 'Open Sans', sans-serif 
+
+        .body
+
+            padding-bottom: 40px
+            color: $black
+            line-height: 1.42857    
+            font-size: 18px
+            width: 80%
+            font-family: 'Josefin Slab', serif
+            font-style: italic
+            word-spacing: 2px
+
+
+        .edit_button, .delete_button
+
+            +button(simple, #40517c)
+            display: inline-block
+            margin-right: 30px
+            font-family: 'Open Sans Condensed', sans-serif
+            color: $white
+
+
+
+
+    .side_part
+
+        width: 20%
+        margin-top: 50px
+    
+        .home_icon
+
+            color: $text_grey
+
     
 
 
@@ -989,15 +1118,6 @@ body
             width: 80%
         
 
-        #author_show_page
-
-            width: 95%
-            font-size: 13px
-            padding: 30px 0px 10px 0px
-            font-family: 'Open Sans', sans-serif
-            color: $dark-grey
-            border-bottom: 0.1px dashed $light-grey
-            width: 80%
 
 
         .show_page_icons
@@ -1024,6 +1144,16 @@ body
 
                 padding: 20px 20px 0px 0px
                 color: #ff383f
+
+
+
+footer
+
+    width: 100vw
+    margin-top: -30px   
+
+
+
                 
     
 

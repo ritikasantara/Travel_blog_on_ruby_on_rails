@@ -21,7 +21,8 @@
         
         
         </li>
-li>
+
+    
 
         <li class="menu"><%= link_to 'ALL POSTS', blogs_url, :id => "anchor_menu" %></li>
 
@@ -52,31 +53,36 @@ li>
 
 <!-- Post body-->
 
-<div class="show_post">
+<div class="show_posts">
 
+<%= @blogs.each do |p| %>
 
+<div class="single_posts">
 
     <div class="post_part">
 
-        <h1 class="title"><%= @post.title %></h1>
+   
+        <h1 class="title"><%= p.title %></h1>
 
-        <p class="date">Posted <%= time_ago_in_words(@post.created_at) %> ago</p>
+        <p class="date">Posted <%= time_ago_in_words(p.created_at) %> ago</p>
 
-        <p class="body"><%= @post.body %></p>
+        <p class="body"><%= p.body %></p>
 
-        <div class="edit_button"><%= link_to "Edit Post", edit_post_path(@post) %></div>
+        <div class="edit_button"><%= link_to "Edit Post", edit_post_path(p) %></div>
 
-    <div class="delete_button"><%= link_to "Delete Post", post_path(@post), method: :delete, data: { confirm: " Are you sure?"} %></div>
+        <div class="delete_button"><%= link_to "Delete Post", post_path(p), method: :delete, data: { confirm: " Are you sure?"} %></div>
 
-        
+      
+
     </div>
+
 
 
     <div class="side_part">
 
+
             <div class="home_icon"><i class="fa fa-home home" aria-hidden="true"></i><%= link_to "Home", root_path %></div>
             <p>share</p>
-
 
 
             <div class="show_page_icons">
@@ -88,16 +94,27 @@ li>
 
             </div>
 
-         
 
 
+    </div>
 
- 
+   
+
+
+  
+
+ </div>
+
+<hr>
+
+<% end %>
+
+
 
 </div>
 
 
-</div>
+
 
 <!-- footer-->
 
@@ -157,3 +174,7 @@ li>
 
 
 </footer>
+
+
+</div>
+
