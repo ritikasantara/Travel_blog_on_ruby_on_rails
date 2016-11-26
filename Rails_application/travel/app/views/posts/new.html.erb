@@ -57,7 +57,7 @@
   <h1>Post your travel experience here</h1>
         
 
-    <%= form_for @post do |f| %>
+    <%= form_for @post, html: {multipart: true} do |f| %>
 
     
 
@@ -68,6 +68,11 @@
     </p>  
 
     <p>
+
+    <%= f.label :Image%>
+    <%= f.file_field :image %>
+
+    </p>
 
     <%= f.text_area :body, placeholder: "Contents of the post" %>
     

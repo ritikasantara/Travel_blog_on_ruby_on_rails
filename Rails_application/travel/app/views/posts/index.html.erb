@@ -200,7 +200,7 @@
             
             <div class="post">
 
-                <%= image_tag('image2.jpg', :width => 300, :height => 200, :alt => 'post_image') %>
+                <%= image_tag(post.image, :width => 300, :height => 200, :alt => 'post_image') %>
                 <h2 class="title"><%= link_to post.title, post %></h2>
                 <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
                 <p class="post_body"><%= truncate(post.body, :length => 190) %></p>
