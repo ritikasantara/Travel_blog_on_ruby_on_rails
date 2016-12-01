@@ -10,7 +10,7 @@
 <nav>
 
 
-        <div id="menu"> 
+        <div class="menubar"> 
 
             <ul>
 
@@ -47,9 +47,47 @@
 
         </div> 
 
-        <div class="menu-toggler">
+           <div class="menu-toggler">
 
             <span></span>
+
+           </div>   
+
+            <div id="slide-menu"> 
+
+                <ul>
+
+                    <li class="pages"><%= link_to 'HOME', root_path %></li>
+
+                    <li class='start_here_toggle pages'><%= link_to 'START HERE' %></li>
+                        
+                    
+                        
+                        
+
+                    <li class="pages_sub"><%= link_to 'GET INSPIRED', root_path %></li>
+                    <li class="pages_sub"><%= link_to 'HOW TO SAVE FOR TRIP', root_path %></li>
+                    <li class="pages_sub"><%= link_to 'FIND CHEAP AIRFARE', root_path %></li>
+                    <li class="pages_sub"><%= link_to 'CHEAP ACCOMODATION', root_path %></li>
+                    <li class="pages_sub"><%= link_to 'COUPLES TRAVEL', root_path %></li>
+
+
+                        
+
+    
+
+                    <li class="pages"><%= link_to 'ALL POSTS', blogs_url  %></li>
+
+
+                    <li class="pages"><%= link_to 'ABOUT', root_path %></li>
+
+                    <li class="pages"><%= link_to 'GUIDES', root_path %></li>
+
+                    <li class="pages"><%= link_to 'CONTACT',root_path %></li>
+
+                </ul>
+
+         
 
         </div>
 
@@ -58,7 +96,7 @@
         <i class="fa fa-search" aria-hidden="true" id="search"></i>
 		 
 	
-
+  
 </nav>
 
 
