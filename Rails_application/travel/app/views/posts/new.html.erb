@@ -4,43 +4,91 @@
 
 <nav>
         
-        <ul>
+        <div class="menubar"> 
 
-        <li class="menu"><%= link_to 'HOME', root_path, :id => "anchor_menu" %></li>
+            <ul>
 
-        <li class="menu"><%= link_to 'START HERE', root_path, :id => "anchor_menu"%>
+            <li class="menu"><%= link_to 'HOME', root_path, :id => "anchor_menu" %></li>
+
+            <li class="menu"><%= link_to 'START HERE', root_path, :id => "anchor_menu"%>
+                
+                <ul class="dropdown">
+
+                    <li><%= link_to 'GET INSPIRED', root_path, :id => "anchor_submenu"%></li>
+                    <li><%= link_to 'HOW TO SAVE FOR TRIP', root_path, :id => "anchor_submenu"%></li>
+                    <li><%= link_to 'FIND CHEAP AIRFARE', root_path, :id => "anchor_submenu"%></li>
+                    <li><%= link_to 'CHEAP ACCOMODATION', root_path, :id => "anchor_submenu"%></li>
+                    <li><%= link_to 'COUPLES TRAVEL', root_path, :id => "anchor_submenu"%></li>
+
+
+                </ul>
             
-            <ul class="dropdown">
+            
+            </li>
 
-                <li><%= link_to 'GET INSPIRED', root_path, :id => "anchor_submenu"%></li>
-                <li><%= link_to 'HOW TO SAVE FOR TRIP', root_path, :id => "anchor_submenu"%></li>
-                <li><%= link_to 'FIND CHEAP AIRFARE', root_path, :id => "anchor_submenu"%></li>
-                <li><%= link_to 'CHEAP ACCOMODATION', root_path, :id => "anchor_submenu"%></li>
-                <li><%= link_to 'COUPLES TRAVEL', root_path, :id => "anchor_submenu"%></li>
+            
 
+            <li class="menu"><%= link_to 'ALL POSTS', blogs_url, :id => "anchor_menu" %></li>
+
+
+            <li class="menu"><%= link_to 'ABOUT', root_path, :id => "anchor_menu" %></li>
+
+            <li class="menu"><%= link_to 'GUIDES', root_path, :id => "anchor_menu" %></li>
+
+            <li class="menu"><%= link_to 'CONTACT',root_path, :id => "anchor_menu" %></li>
 
             </ul>
-        
-        
-        </li>
+
+        </div> 
+
+           <div class="menu-toggler">
+
+            <span></span>
+
+           </div>   
+
+            <div id="slide-menu"> 
+
+                <ul>
+
+                    <li class="pages"><%= link_to 'HOME', root_path %></li>
+
+                    <li class='start_here_toggle pages'><%= link_to 'START HERE' %></li>
+                        
+                    
+                        
+                        
+
+                    <li class="pages_sub"><%= link_to 'GET INSPIRED' %></li>
+                    <li class="pages_sub"><%= link_to 'HOW TO SAVE FOR TRIP' %></li>
+                    <li class="pages_sub"><%= link_to 'FIND CHEAP AIRFARE' %></li>
+                    <li class="pages_sub"><%= link_to 'CHEAP ACCOMODATION' %></li>
+                    <li class="pages_sub"><%= link_to 'COUPLES TRAVEL' %></li>
 
 
-        <li class="menu"><%= link_to 'ALL POSTS', blogs_url, :id => "anchor_menu" %></li>
+                        
 
-        <li class="menu"><%= link_to 'ABOUT', root_path, :id => "anchor_menu" %></li>
+    
 
-        <li class="menu"><%= link_to 'GUIDES', root_path, :id => "anchor_menu" %></li>
+                    <li class="pages"><%= link_to 'ALL POSTS', blogs_url  %></li>
 
-        <li class="menu"><%= link_to 'CONTACT',root_path, :id => "anchor_menu" %></li>
 
-        </ul>
+                    <li class="pages"><%= link_to 'ABOUT' %></li>
+
+                    <li class="pages"><%= link_to 'GUIDES' %></li>
+
+                    <li class="pages"><%= link_to 'CONTACT' %></li>
+
+                </ul>
+
+         
+
+        </div>
 
         <input type="text" placeholder="Search destinations" id="search_input">
         
         <i class="fa fa-search" aria-hidden="true" id="search"></i>
-        
-    
-
+		 
 </nav>
 
 <div class="header_new_page">
@@ -90,29 +138,29 @@
 
   <!-- footer-->
 
-<footer>
+<div class=footer>
 
- <div class="footer_stuffs">
+ <div class="footer_stuffs_new">
 
-  <div class="about_footer"><p>ABOUT</p>
+  <div class="about_footer_new"><p>ABOUT</p>
 
      <ul>
 
-        <li><%= link_to 'About Travelogue', root_path, :id => "about_submenu"%></li>
-        <li><%= link_to 'Contact', root_path, :id => "contact_submenu"%></li>
-        <li><%= link_to 'Privacy Policy', root_path, :id => "privacy_submenu"%></li>
+        <li><%= link_to 'About Travelogue', root_path, :id => "about_submenu_new"%></li>
+        <li><%= link_to 'Contact', root_path, :id => "contact_submenu_new"%></li>
+        <li><%= link_to 'Privacy Policy', root_path, :id => "privacy_submenu_new"%></li>
 
      </ul>
 
     </div>
 
-    <div class="travel_tips_footer"><p>TRAVEL TIPS</p>
+    <div class="travel_tips_footer_new"><p>TRAVEL TIPS</p>
 
      <ul>
 
-        <li><%= link_to 'Start Here', root_path, :id => "start_submenu"%></li>
-        <li><%= link_to 'Travel Blog', root_path, :id => "blog_submenu"%></li>
-        <li><%= link_to 'Destination Guides', root_path, :id => "destination_submenu"%></li>
+        <li><%= link_to 'Start Here', root_path, :id => "start_submenu_new"%></li>
+        <li><%= link_to 'Travel Blog', root_path, :id => "blog_submenu_new"%></li>
+        <li><%= link_to 'Destination Guides', root_path, :id => "destination_submenu_new"%></li>
 
      </ul>
      
@@ -120,20 +168,20 @@
 
     <div>
 
-        <div class="search_footer"><p>SEARCH</p>
+        <div class="search_footer_new"><p>SEARCH</p>
 
-           <input type="text" id="input_footer" placeholder="   Where do you want to go today?">
+           <input type="text" id="input_footer_new" placeholder="  Where do you want to go today?">
         
         </div>
 
-        <div class="followme_footer">
+        <div class="followme_footer_new">
 
             <p>FOLLOW ME ON THE WEB</p>
 
-            <span class="round_thumbnail"><a href="#"><i class="fa fa-twitter icons_footer" aria-hidden="true" class ="fa_icon"></i></a></span>
-            <span class="round_thumbnail"><a href="#"><i class="fa fa-instagram icons_footer" aria-hidden="true" class ="fa_icon"></i></a></span>
-            <span class="round_thumbnail"><a href="#"><i class="fa fa-facebook-official icons_footer" aria-hidden="true" class ="fa_icon"></i></a></span>
-            <span class="round_thumbnail"><a href="#"><i class="fa fa-envelope icons_footer" id="envelope" aria-hidden="true" class="fa_icon"></i></a></span>
+            <span class="round_thumbnail"><a href="#"><i class="fa fa-twitter icons_footer_new" aria-hidden="true" class ="fa_icon"></i></a></span>
+            <span class="round_thumbnail"><a href="#"><i class="fa fa-instagram icons_footer_new" aria-hidden="true" class ="fa_icon"></i></a></span>
+            <span class="round_thumbnail"><a href="#"><i class="fa fa-facebook-official icons_footer_new" aria-hidden="true" class ="fa_icon"></i></a></span>
+            <span class="round_thumbnail"><a href="#"><i class="fa fa-envelope icons_footer_new" id="envelope" aria-hidden="true" class="fa_icon"></i></a></span>
 
         
         </div>
@@ -142,7 +190,7 @@
 
    </div> 
 
-    <div class="copyright">&copy; 2016 | Travelogue</div>
+    <div class="copyright_new">&copy; 2016 | Travelogue</div>
 
 
-</footer>
+</div>
