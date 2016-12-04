@@ -957,7 +957,7 @@ nav
 
 
     
-    form
+    #form_new
 
 
         width: 550px
@@ -1061,17 +1061,110 @@ nav
                 +background(darken($new-page-blue, 2%))
                 cursor: pointer
 
-footer
 
-    margin-top: 0px 
+    #form_edit
 
-    @media screen and (max-width: 1200px)
 
-        margin-top: -1000px   
+        width: 550px
+        height: 80%
+        margin: 60px auto
+        background: rgba(0,0,0,0.4)
+        border-radius: 5px
+        padding: 50px 30px
 
-    @media screen and (max-width: 390px)
+        @media screen and (max-width: 1000px)
 
-        font-size: 17px       
+            background: rgba($orange, 0.5)
+
+        @media screen and (max-width: 900px)
+
+            margin-top: 60px
+
+        @media screen and (max-width: 700px)
+
+            width: 90%
+
+       
+
+
+        label
+
+            color: $white
+            text-transform: uppercase
+            margin-left: 10px
+
+            @media screen and (max-width: 1000px)
+
+                color: $grey
+
+        input
+
+            width: 100%
+            margin-bottom: 20px
+            padding: 7px
+            font-size: 20px
+            color: $black
+            text-style: italic
+            border: none
+            border-radius: 2px
+            font-family: 'Open Sans Condensed', sans-serif
+
+            @media screen and (max-width: 390px)
+
+                font-size: 18px
+
+            @media screen and (max-width: 340px)
+
+                font-size: 14px    
+
+     
+
+        textarea
+
+            min-height: 400px
+            max-height: 450px
+            max-width: 100% 
+            width: 100% 
+            margin-bottom: 20px
+            padding: 7px
+            font-size: 20px
+            color: $black
+            text-style: italic
+            border: none
+            border-radius: 2px
+            font-family: 'Open Sans Condensed', sans-serif
+
+            @media screen and (max-width: 476px)
+
+                min-height: 300px
+                max-height: 350px
+
+            @media screen and (max-width: 390px)
+
+                min-height: 200px
+                max-height: 250px
+
+
+
+        button
+
+            +background(linear-gradient(top, darken($new-page-blue, 10%), lighten($new-page-blue, 10%)))  
+            color: $white 
+            width: 100%
+            margin-top: 30px
+            padding: 10px
+            border: none
+            border-radius: 2px
+            font-family: 'Open Sans Condensed', sans-serif
+            font-size: 20px
+
+
+            &:hover
+
+                +background(darken($new-page-blue, 2%))
+                cursor: pointer
+
+
     
 
 /* show post page */
@@ -1323,13 +1416,13 @@ html
 
 
 
-.footer
+.footer,.footer_edit
 
     background: $white
     position: relative
     top: 30px
     height: 350px
-    font-family: 'Open s5ans',sans-serif
+    font-family: 'Open sans',sans-serif
     color: $white
     padding-top: 20px
 
@@ -1439,7 +1532,8 @@ html
         font-size: 13px
 
 
-       
+
+
 
 
 
@@ -1591,6 +1685,11 @@ html
 
         position: relative
         top: 530px
+
+    .footer_edit
+
+        position: relative
+        top: -460px    
          
 @media only screen and (max-width: 881px)
 
