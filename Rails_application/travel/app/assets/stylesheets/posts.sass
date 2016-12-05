@@ -1172,21 +1172,41 @@ nav
 body
 
     background: $body-color
-    height: 100%
+    min-height: 100%
 
              
 .show_post
 
     background: $white
-    width: 1000px
-    height: 100%
+    width: 90%
+    height: 150vh
     margin: 240px auto 0px auto
     position: relative
     padding: 10px 110px 10px 110px  
     box-shadow: 0px 1px 9px 0px $dark-grey 
     position: relative
     +display(flex)
+
+    @media screen and (max-width: 1200px)
+
+     
+        height: 250vh
    
+
+    @media screen and (max-width: 900px)
+
+        +display(block)
+        height: 200vh
+        padding: 10px 30px
+
+    @media screen and (max-width: 600px)
+
+     
+        height: 300vh
+     
+        
+
+
 
     
 
@@ -1196,6 +1216,12 @@ body
 
         width: 80%
 
+        @media screen and (max-width: 900px)
+
+            width: 100%
+            text-align: center
+            margin: 0 auto
+
 
         .title
 
@@ -1204,6 +1230,11 @@ body
             color: lighten($new-page-blue, 2%)
             border-bottom: 0.01px dashed $light-grey
             width: 60%
+
+            @media screen and (max-width: 900px)
+
+                text-align: center
+                width: 100%
             
             &:hover
 
@@ -1218,9 +1249,19 @@ body
             font-style: italic 
             font-family: 'Open Sans', sans-serif 
 
+        .post_image
+
+            margin: 0 auto
+  
+
+            @media screen and (max-width: 400px)
+
+             
+                margin: 0 auto
+
         .body
 
-            padding-bottom: 40px
+            padding: 40px 0 
             color: $black
             line-height: 1.42857    
             font-size: 18px
@@ -1228,6 +1269,10 @@ body
             font-family: 'Josefin Slab', serif
             font-style: italic
             word-spacing: 2px
+
+            @media screen and (max-width: 900px)
+
+                width: 100%
 
 
         .edit_button, .delete_button
@@ -1245,6 +1290,10 @@ body
 
         width: 20%
         margin-top: 50px
+
+        @media screen and (max-width: 900px)
+
+            width: 100%
     
         .home_icon
 
@@ -1272,22 +1321,22 @@ body
             a:nth-child(1)
 
                 padding: 20px 20px 0px 0px
-                color: #007849
+                color: #3cba54
 
             a:nth-child(2)
 
                 padding: 20px 20px 0px 0px
-                color: #813772
+                color: #f4c20d
 
             a:nth-child(3)
 
                 padding: 20px 20px 0px 0px
-                color: #078898
+                color: #4885ed
 
             a:nth-child(4)
 
                 padding: 20px 20px 0px 0px
-                color: #ff383f
+                color: #db3236
 
 
 /* Blogs page */
@@ -1416,7 +1465,7 @@ html
 
 
 
-.footer,.footer_edit
+.footer,.footer_edit,.footer_show
 
     background: $white
     position: relative
@@ -1601,6 +1650,13 @@ html
         position: relative
         top: 530px    
 
+              
+    .footer_show
+
+        position: relative
+        top: 200px
+
+
 
 
 @media only screen and (max-width: 900px)
@@ -1686,11 +1742,31 @@ html
         position: relative
         top: 530px
 
+        @media screen and (max-width: 600px)
+
+            font-size: 15px  
+           
+        
+
     .footer_edit
 
         position: relative
-        top: -460px    
+        top: -460px
+
+        @media screen and (max-width: 600px)
+
+            font-size: 15px    
          
+    .footer_show
+
+        position: relative
+        top: -350px
+
+        @media screen and (max-width: 600px)
+
+            font-size: 15px
+
+
 @media only screen and (max-width: 881px)
 
     .subscribe-label

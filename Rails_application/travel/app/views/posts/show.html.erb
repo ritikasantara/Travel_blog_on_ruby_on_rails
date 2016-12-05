@@ -113,6 +113,8 @@
 
         <p class="date">Posted <%= time_ago_in_words(@post.created_at) %> ago</p>
 
+        <div class="post_image"><%= image_tag(@post.image, :width => 250, :height => 150, :alt => 'post_image') %></div>
+
         <p class="body"><%= @post.body %></p>
 
         <div class="edit_button"><%= link_to "Edit Post", edit_post_path(@post) %></div>
@@ -152,29 +154,31 @@
 
 <!-- footer-->
 
-<footer>
 
- <div class="footer_stuffs">
 
-  <div class="about_footer"><p>ABOUT</p>
+<div class=footer_show>
+
+ <div class="footer_stuffs_new">
+
+  <div class="about_footer_new"><p>ABOUT</p>
 
      <ul>
 
-        <li><%= link_to 'About Travelogue', root_path, :id => "about_submenu"%></li>
-        <li><%= link_to 'Contact', root_path, :id => "contact_submenu"%></li>
-        <li><%= link_to 'Privacy Policy', root_path, :id => "privacy_submenu"%></li>
+        <li><%= link_to 'About Travelogue', root_path, :id => "about_submenu_new"%></li>
+        <li><%= link_to 'Contact', root_path, :id => "contact_submenu_new"%></li>
+        <li><%= link_to 'Privacy Policy', root_path, :id => "privacy_submenu_new"%></li>
 
      </ul>
 
     </div>
 
-    <div class="travel_tips_footer"><p>TRAVEL TIPS</p>
+    <div class="travel_tips_footer_new"><p>TRAVEL TIPS</p>
 
      <ul>
 
-        <li><%= link_to 'Start Here', root_path, :id => "start_submenu"%></li>
-        <li><%= link_to 'Travel Blog', root_path, :id => "blog_submenu"%></li>
-        <li><%= link_to 'Destination Guides', root_path, :id => "destination_submenu"%></li>
+        <li><%= link_to 'Start Here', root_path, :id => "start_submenu_new"%></li>
+        <li><%= link_to 'Travel Blog', root_path, :id => "blog_submenu_new"%></li>
+        <li><%= link_to 'Destination Guides', root_path, :id => "destination_submenu_new"%></li>
 
      </ul>
      
@@ -182,20 +186,20 @@
 
     <div>
 
-        <div class="search_footer"><p>SEARCH</p>
+        <div class="search_footer_new"><p>SEARCH</p>
 
-           <input type="text" id="input_footer" placeholder="   Where do you want to go today?">
+           <input type="text" id="input_footer_new" placeholder="  Where do you want to go today?">
         
         </div>
 
-        <div class="followme_footer">
+        <div class="followme_footer_new">
 
             <p>FOLLOW ME ON THE WEB</p>
 
-            <span class="round_thumbnail"><a href="#"><i class="fa fa-twitter icons_footer" aria-hidden="true" class ="fa_icon"></i></a></span>
-            <span class="round_thumbnail"><a href="#"><i class="fa fa-instagram icons_footer" aria-hidden="true" class ="fa_icon"></i></a></span>
-            <span class="round_thumbnail"><a href="#"><i class="fa fa-facebook-official icons_footer" aria-hidden="true" class ="fa_icon"></i></a></span>
-            <span class="round_thumbnail"><a href="#"><i class="fa fa-envelope icons_footer" id="envelope" aria-hidden="true" class="fa_icon"></i></a></span>
+            <span class="round_thumbnail"><a href="#"><i class="fa fa-twitter icons_footer_new" aria-hidden="true" class ="fa_icon"></i></a></span>
+            <span class="round_thumbnail"><a href="#"><i class="fa fa-instagram icons_footer_new" aria-hidden="true" class ="fa_icon"></i></a></span>
+            <span class="round_thumbnail"><a href="#"><i class="fa fa-facebook-official icons_footer_new" aria-hidden="true" class ="fa_icon"></i></a></span>
+            <span class="round_thumbnail"><a href="#"><i class="fa fa-envelope icons_footer_new" id="envelope" aria-hidden="true" class="fa_icon"></i></a></span>
 
         
         </div>
@@ -204,7 +208,7 @@
 
    </div> 
 
-    <div class="copyright">&copy; 2016 | Travelogue</div>
+    <div class="copyright_new">&copy; 2016 | Travelogue</div>
 
 
-</footer>
+</div>
