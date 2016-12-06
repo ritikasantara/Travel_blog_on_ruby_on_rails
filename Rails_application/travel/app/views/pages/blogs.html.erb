@@ -66,6 +66,8 @@
 
         <p class="date">Posted <%= time_ago_in_words(p.created_at) %> ago</p>
 
+        <div class="post_image"><%= image_tag(p.image, :width => 250, :height => 150, :alt => 'post_image') %></div>
+
         <p class="body"><%= p.body %></p>
 
         <div class="edit_button"><%= link_to "Edit Post", edit_post_path(p) %></div>
